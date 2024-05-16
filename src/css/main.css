@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+    padding: 10px;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: red;
+}
