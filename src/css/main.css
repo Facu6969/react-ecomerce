@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-.contenedor {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-}
 
 aside {
     background: linear-gradient(
@@ -51,4 +47,25 @@ aside {
 
 .nav-link:hover {
     color: black;
+}
+
+.item-list-container{
+    background-color: brown;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    max-width: 756px;
+}
+
+.productos-grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+
 }

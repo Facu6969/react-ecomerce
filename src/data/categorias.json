@@ -1,0 +1,14 @@
+[
+    {
+        "id": "tirante",
+        "nombre": "tirante"
+    },
+    {
+        "id": "columna",
+        "nombre": "columna"
+    },
+    {
+        "id": "viga",
+        "nombre": "viga"
+    }
+]

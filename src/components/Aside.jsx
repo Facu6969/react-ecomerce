@@ -1,8 +1,8 @@
 import React from 'react'
-import Header from './header/Header'
-import NavBar from './header/NavBar'
-import Cart from './header/Cart'
-import Footer from './footer/Footer'
+import Header from './Header'
+import NavBar from './NavBar'
+import Cart from './Cart'
+import Footer from './Footer'
 
 const Aside = () => {
   return (
