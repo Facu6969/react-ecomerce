@@ -1,14 +1,17 @@
 import React from 'react'
+import Cart from './Cart'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <nav className='nav'>
             <ul className='nav-menu'>
-                <li><a className='nav-link' href="#">Inicio</a></li>
-                <li><a className='nav-link' href="#">Tirantes</a></li>
-                <li><a className='nav-link' href="#">Columnas</a></li>
-                <li><a className='nav-link' href="#">Vigas</a></li>
+                <li ><Link to="/" className='nav-link'>Inicio</Link></li>
+                <li><Link to="/categorias/tirante" className='nav-link'>Tirantes</Link></li>
+                <li><Link to="/categorias/columna" className='nav-link'>Columnas</Link></li>
+                <li><Link to="/categorias/viga" className='nav-link'>Vigas</Link></li>
             </ul>
+            <Cart />
      </nav>
   )
 }

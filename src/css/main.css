@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+    display: flex;
+  }
+  
 
 
-aside {
+.aside {
     background: linear-gradient(
         45deg,
         rgb(3, 110, 17) 0,
@@ -15,24 +19,26 @@ aside {
     padding-right: 0;
     position: sticky;
     top: 0;
-    height: 100vh;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+
 .logo-link {
     text-decoration: none;
     color: black;
+    padding: 30px;
 }
 
 .nav-menu {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    gap: 20px;
     padding: 5px;
     padding-right: 0;
+    gap: 2rem;
 }
 .nav-menu li:hover {
     background-color: white;
@@ -47,6 +53,10 @@ aside {
 
 .nav-link:hover {
     color: black;
+}
+
+.carrito{
+    padding: 20px;
 }
 
 .item-list-container{
@@ -67,5 +77,4 @@ aside {
     background-color: white;
     border-radius: 10px;
     padding: 10px;
-
 }

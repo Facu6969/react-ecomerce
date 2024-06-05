@@ -6,10 +6,9 @@ import Footer from './Footer'
 
 const Aside = () => {
   return (
-    <aside>
+    <aside className='aside'>
         <Header />
         <NavBar />
-        <Cart />
         <Footer />
     </aside>
   )
