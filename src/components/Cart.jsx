@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   return (
-    <div className="carrito">
+    <Link className="carrito" to="/Carrito">
       🛒 1
-    </div>
-  )
+    </Link>
+  );
 }
 
-export default Cart
+export default Cart;

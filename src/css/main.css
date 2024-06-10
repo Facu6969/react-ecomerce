@@ -11,9 +11,9 @@
 
 .aside {
     background: linear-gradient(
-        45deg,
+        90deg,
         rgb(3, 110, 17) 0,
-        rgb(249, 250, 249)95%
+        rgb(249, 250, 249)70%
     );
     padding: 10px;
     padding-right: 0;
@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100vh;
 }
 
 
@@ -32,6 +33,7 @@
     padding: 30px;
 }
 
+
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -39,6 +41,7 @@
     padding: 5px;
     padding-right: 0;
     gap: 2rem;
+    margin-bottom: 5rem;
 }
 .nav-menu li:hover {
     background-color: white;
@@ -56,7 +59,8 @@
 }
 
 .carrito{
-    padding: 20px;
+    padding: 5px;
+    text-decoration: none;
 }
 
 .item-list-container{
@@ -78,3 +82,13 @@
     border-radius: 10px;
     padding: 10px;
 }
+
+.main-content {
+    background: linear-gradient(
+        90deg,
+        rgb(249, 250, 249) 0,
+        rgb(11, 22, 13)95%
+    );
+    width: 100%;
+}
+
