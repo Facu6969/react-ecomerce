@@ -12,7 +12,7 @@
     "imagen": "https://placeholder.pics/svg/150" 
 },
     { 
-    "id": 2, 
+    "id": 4, 
     "categoria": {
         "id": "tirante",
         "nombre": "tirante"
@@ -25,7 +25,7 @@
     "imagen": "https://placeholder.pics/svg/150" 
 },
     { 
-    "id": 3, 
+    "id": 2, 
     "categoria": {
         "id": "tirante",
         "nombre": "tirante"
@@ -37,7 +37,7 @@
     "imagen": "https://placeholder.pics/svg/150" 
 },
     { 
-    "id": 4, 
+    "id": 3, 
     "categoria": {
         "id": "tirante",
         "nombre": "tirante"

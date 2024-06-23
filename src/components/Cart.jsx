@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Cart = () => {
+const Cart = (props) => {
   return (
     <Link className="carrito" to="/Carrito">
-      🛒 1
+      🛒 {props.num}
     </Link>
   );
 }

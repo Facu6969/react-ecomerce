@@ -1,14 +1,14 @@
 [
     {
         "id": "tirante",
-        "nombre": "tirante"
+        "nombre": "Tirante"
     },
     {
         "id": "columna",
-        "nombre": "columna"
+        "nombre": "Columna"
     },
     {
         "id": "viga",
-        "nombre": "viga"
+        "nombre": "Viga"
     }
 ]

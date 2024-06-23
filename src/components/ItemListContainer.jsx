@@ -1,28 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../data/productos.json';
+import categoriasData from '../data/categorias.json';
+import productosData from '../data/productos.json';
 import ItemList from './ItemList';
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
   const [titulo, setTitulo] = useState("Productos"); 
+  const [categorias, setCategorias] = useState([]);
+
+  const obtenerProductos = () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(productosData);
+      }, 1000); 
+    });
+  };
 
   useEffect(() => {
-    if (id) {
-      const categoria = data.find(producto => producto.categoria.id === id)?.categoria;
-      setTitulo(categoria ? categoria.nombre : "Productos");
-      setProductos(data.filter(producto => producto.categoria.id === id));
-    } else {
-      setTitulo("Productos");
-      setProductos(data);
-    }
+    setCategorias(categoriasData);
+    obtenerProductos().then((productos) => {
+      if (id) {
+        const categoria = categoriasData.find(categoria => categoria.id === id);
+        if (categoria) {
+          setTitulo(categoria.nombre);
+          setProductos(productos.filter(producto => producto.categoria.id === id));
+        } else {
+          setTitulo("Productos");
+          setProductos(productos);
+        }
+      } else {
+        setTitulo("Productos");
+        setProductos(productos);
+      }
+      setLoading(false); // Indica que los datos han sido cargados
+    });
   }, [id]);
 
   return (
     <div className="item-list-container">
       <h1>{titulo}</h1>
-      <ItemList productos={productos} />
+      {loading ? <p>Cargando productos...</p> : <ItemList productos={productos} categorias={categorias} />}
     </div>
   );
 }
