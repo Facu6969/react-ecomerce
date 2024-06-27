@@ -11,9 +11,21 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-    const productoEncontrado = data.find(producto => producto.id === parseInt(id));
-    setProducto(productoEncontrado);
-    setLoading(false);
+    
+    const fetchProducto = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const productoEncontrado = data.find(producto => producto.id === parseInt(id));
+        resolve(productoEncontrado);
+      }, 1000); 
+    });
+
+    fetchProducto.then(productoEncontrado => {
+      setProducto(productoEncontrado);
+      setLoading(false); 
+    }).catch(error => {
+      console.error("Error al cargar el producto:", error);
+      setLoading(false);
+    });
   }, [id]);
 
   if (loading) {

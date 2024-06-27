@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import CartContext from '../contex/CartContext';
 
-const Cart = (props) => {
+const Cart = () => {
+  
+  const {carrito} = useContext(CartContext)
+
   return (
     <Link className="carrito" to="/Carrito">
-      🛒 {props.num}
+      🛒 {carrito.length}
     </Link>
   );
 }

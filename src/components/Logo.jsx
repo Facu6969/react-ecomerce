@@ -1,10 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Logo = () => {
   return (
-    <h1><Link to="/" className='logo-link'>Valyria</Link></h1>
-  )
+    <h1>
+      <NavLink 
+        to="/" 
+        className={({ isActive }) => isActive ? 'logo-link active' : 'logo-link'}
+      >
+        Valyria
+      </NavLink>
+    </h1>
+  );
 }
 
-export default Logo
+export default Logo;

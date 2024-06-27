@@ -3,11 +3,11 @@ import Header from './Header'
 import NavBar from './NavBar'
 import Footer from './Footer'
 
-const Aside = (props) => {
+const Aside = () => {
   return (
     <aside className='aside'>
         <Header />
-        <NavBar num={props.num}/>
+        <NavBar/>
         <Footer />
     </aside>
   )

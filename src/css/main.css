@@ -158,10 +158,35 @@
     margin-top: 450px;
   }
   
-  .home-link:hover {
+.home-link:hover {
     background-color: transparent;
     color: red;
-  }
+}
+
+.producto-carrito {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.imagen {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+  
+.detalleProducto {
+    flex: 1;
+}
+  
+.inputCantidad {
+    width: 50px;
+    padding: 5px;
+    font-size: 14px;
+}
   
   
   

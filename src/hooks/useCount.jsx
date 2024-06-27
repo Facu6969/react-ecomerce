@@ -1,21 +1,27 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-const useCount = (initial, min ,max) => {
-    
-    let [count , setCount] = useState(initial);
+const useCount = (initial, min, max, onDelete) => {
+  let [count, setCount] = useState(initial);
 
-    const handLeRestar = () => {
-        count > min && setCount ((prev) => prev - 1);
+  const handleRestar = () => {
+    if (count > min) {
+      setCount(prev => prev - 1);
+    } else if (count === 1) {
+      onDelete(); 
     }
-    const handLeSumar = () => {
-        count > max && setCount ((prev) => prev + 1);
-    }
-    const handLeReset = () => {
-        setCount (initial);
-    }
+  };
 
-    
-  return { count, handLeRestar, handLeSumar, handLeReset }
-}
+  const handleSumar = () => {
+    if (count < max) {
+      setCount(prev => prev + 1);
+    }
+  };
 
-export default useCount
+  const handleReset = () => {
+    setCount(initial);
+  };
+
+  return { count, handleRestar, handleSumar, handleReset };
+};
+
+export default useCount;

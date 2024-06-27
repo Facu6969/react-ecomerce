@@ -7,7 +7,7 @@
     }, 
     "medida": "2x4", 
     "largo": "8 pies", 
-    "precio": 15.99, 
+    "precio": 1600, 
     "cantidad": 100, 
     "imagen": "https://placeholder.pics/svg/150" 
 },
@@ -19,7 +19,7 @@
     }, 
     "medida": "2x4", 
     "largo": "10 pies", 
-    "precio": 19.99, 
+    "precio": 2000, 
     "cantidad": 150, 
 
     "imagen": "https://placeholder.pics/svg/150" 
@@ -32,7 +32,7 @@
     }, 
     "medida": "2x6", 
     "largo": "8 pies", 
-    "precio": 18.99, 
+    "precio": 1900, 
     "cantidad": 120, 
     "imagen": "https://placeholder.pics/svg/150" 
 },
@@ -44,7 +44,7 @@
     }, 
     "medida": "2x6", 
     "largo": "10 pies", 
-    "precio": 23.99, 
+    "precio": 2400, 
     "cantidad": 80, 
     "imagen": "https://placeholder.pics/svg/150" 
 },
@@ -56,7 +56,7 @@
     }, 
     "medida": "4x4", 
     "largo": "8 pies", 
-    "precio": 15.99, 
+    "precio": 1600, 
     "cantidad": 100, 
     "imagen": "https://placeholder.pics/svg/150" 
 },
@@ -68,7 +68,7 @@
     }, 
     "medida": "4x4", 
     "largo": "10 pies", 
-    "precio": 19.99, 
+    "precio": 2000, 
     "cantidad": 150, 
 
     "imagen": "https://placeholder.pics/svg/150" 
@@ -81,7 +81,7 @@
     }, 
     "medida": "6x6", 
     "largo": "8 pies", 
-    "precio": 18.99, 
+    "precio": 1900, 
     "cantidad": 120, 
     "imagen": "https://placeholder.pics/svg/150" 
 },
@@ -93,7 +93,7 @@
     }, 
     "medida": "6x6", 
     "largo": "10 pies", 
-    "precio": 23.99, 
+    "precio": 2400, 
     "cantidad": 80, 
     "imagen": "https://placeholder.pics/svg/150" 
 },
@@ -105,7 +105,7 @@
     }, 
     "medida": "2x8", 
     "largo": "8 pies", 
-    "precio": 22.99, 
+    "precio": 2300, 
     "cantidad": 60, 
     "imagen": "https://placeholder.pics/svg/150" 
 },
@@ -117,7 +117,7 @@
     }, 
     "medida": "2x8", 
     "largo": "10 pies", 
-    "precio": 27.99, 
+    "precio": 2800, 
     "cantidad": 90, 
     "imagen": "https://placeholder.pics/svg/150" 
 },
@@ -129,7 +129,7 @@
     }, 
     "medida": "2x10", 
     "largo": "8 pies", 
-    "precio": 24.99, 
+    "precio": 2500, 
     "cantidad": 70, 
     "imagen": "https://placeholder.pics/svg/150" 
 },
@@ -141,7 +141,7 @@
     }, 
     "medida": "2x10", 
     "largo": "10 pies", 
-    "precio": 29.99, 
+    "precio": 3000, 
     "cantidad": 50, 
     "imagen": "https://placeholder.pics/svg/150" 
 }
