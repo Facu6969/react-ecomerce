@@ -4,11 +4,7 @@ import useCount from '../hooks/useCount';
 
 const ItemDetail = ({ producto }) => {
   const { agregarProducto } = useContext(CartContext);
-  const { count, handleRestar, handleSumar, handleReset } = useCount(1, 1, producto.cantidad);
-
-  const handleComprar = () => {
-    agregarProducto(producto, count);
-  };
+  const { count, handleRestar, handleSumar } = useCount(1, 1, producto.cantidad);
 
   return (
     <div className='producto-detalle'>
@@ -23,7 +19,7 @@ const ItemDetail = ({ producto }) => {
         <span>{count}</span>
         <button onClick={handleSumar}>+</button>
       </div>
-      <button onClick={handleComprar}>Comprar</button>
+      <button onClick={() => agregarProducto(producto, count)}>Agregar Producto</button>
     </div>
   );
 };

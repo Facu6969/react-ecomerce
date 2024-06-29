@@ -30,13 +30,32 @@ export const CartProvider = ({ children }) => {
     // productosData = productosActualizados;
 };
 
+const handleChangeCantidad = (event, producto) => {
+  const nuevaCantidad = parseInt(event.target.value, 10);
+  if (!isNaN(nuevaCantidad) && nuevaCantidad >= 0) {
+    const carritoActualizado = carrito.map(p =>
+      p.id === producto.id
+        ? { ...p, cantidad: nuevaCantidad }
+        : p
+    );
+    setCarrito(carritoActualizado.filter(p => p.cantidad > 0));
+  }
+};
 
+const handleKeyDown = (event, producto) => {
+  if (event.key === 'Enter') {
+    const nuevaCantidad = parseInt(event.target.value, 10);
+    if (!isNaN(nuevaCantidad) && nuevaCantidad >= 0) {
+      handleChangeCantidad(event, producto);
+    }
+  }
+};
 
 const CalcTotal = () => {
     return carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
 };
 
-const value = { carrito, setCarrito, agregarProducto, CalcTotal };
+const value = { carrito, setCarrito, agregarProducto, handleChangeCantidad, handleKeyDown, CalcTotal };
 
   return (
     <CartContext.Provider value={value}>

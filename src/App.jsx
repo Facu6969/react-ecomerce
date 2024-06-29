@@ -4,8 +4,8 @@ import ItemListContainer from './components/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Carrito from "./components/Carrito.jsx"
 import NotFound from './components/NotFound.jsx';
-import './css/main.css';
 import { CartProvider } from './contex/CartContext.jsx';
+import './css/main.css';
 
 
 

@@ -118,10 +118,83 @@
 }
 
 .producto {
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px;
-}
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .producto h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .producto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .producto p {
+    font-size: 1em;
+    margin: 10px 0;
+  }
+  
+  .producto a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .producto a:hover {
+    text-decoration: underline;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .quantity-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .quantity-controls button:hover {
+    background-color: #0056b3;
+  }
+  
+  .quantity-controls span {
+    margin: 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .add-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .add-button:hover {
+    background-color: #218838;
+  }
+  
 
 .main-content {
     background: linear-gradient(
@@ -141,7 +214,7 @@
     height: 100vh; 
     text-align: center;
     background-color: #2E8B57;
-    background-image: url("../assets/404NotFound.jpg");
+    background-image: url("/public/assets/404NotFound.jpg");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -163,31 +236,90 @@
     color: red;
 }
 
+.carrito-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+  
+.productos-carrito {
+    flex: 2;
+    margin-right: 20px;
+}
+  
 .producto-carrito {
     display: flex;
     align-items: center;
-    margin: 10px 0;
-    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #cccccc55;
+    padding: 10px;
+    border-radius: 8px;
 }
   
 .imagen {
     width: 100px;
     height: 100px;
+    object-fit: cover;
     margin-right: 20px;
+    border: 1px solid red;
+    border-radius: 4px ;
 }
   
 .detalleProducto {
     flex: 1;
 }
   
-.inputCantidad {
-    width: 50px;
-    padding: 5px;
-    font-size: 14px;
+.cantidad-eliminar {
+    display: flex;
+    align-items: center;
 }
   
+.inputCantidad {
+    width: 60px;
+    height: 25px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+  
+.cantidad-eliminar button {
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+}
+.cantidad-eliminar button:hover{
+    color: red;
+    background-color: #000;
+}
+  
+.total-carrito {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #cccccc55;
+    height: 30vh;
+}
+  
+.total-carrito h2 {
+    margin-bottom: 20px;
+}
+  
+.total-carrito button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.total-carrito button:hover{
+    background-color: #0057b4;
+}
   
   
   

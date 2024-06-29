@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import categoriasData from '../data/categorias.json';
-import productosData from '../data/productos.json';
 import ItemList from './ItemList';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -11,32 +11,39 @@ const ItemListContainer = () => {
   const [titulo, setTitulo] = useState("Productos"); 
   const [categorias, setCategorias] = useState([]);
 
-  const obtenerProductos = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(productosData);
-      }, 1000); 
-    });
-  };
+  
 
   useEffect(() => {
-    setCategorias(categoriasData);
-    obtenerProductos().then((productos) => {
-      if (id) {
-        const categoria = categoriasData.find(categoria => categoria.id === id);
-        if (categoria) {
-          setTitulo(categoria.nombre);
-          setProductos(productos.filter(producto => producto.categoria.id === id));
+    const fetchData = async () => {
+      try {
+        const categoriasSnap = await getDocs(collection(db, 'categorias'));
+        const categoriasData = categoriasSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setCategorias(categoriasData);
+
+        const productosSnap = await getDocs(collection(db, 'productos'));
+        const productosData = productosSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+        if (id) {
+          const categoria = categoriasData.find(categoria => categoria.id === id);
+          if (categoria) {
+            setTitulo(categoria.nombre);
+            setProductos(productosData.filter(producto => producto.categoriaId === id));
+          } else {
+            setTitulo("Productos");
+            setProductos(productosData);
+          }
         } else {
           setTitulo("Productos");
-          setProductos(productos);
+          setProductos(productosData);
         }
-      } else {
-        setTitulo("Productos");
-        setProductos(productos);
+      } catch (error) {
+        console.error("Error al obtener los datos:", error);
+      } finally {
+        setLoading(false); 
       }
-      setLoading(false); // Indica que los datos han sido cargados
-    });
+    };
+
+    fetchData();
   }, [id]);
 
   return (

@@ -28,15 +28,15 @@ const ItemDetailContainer = () => {
     });
   }, [id]);
 
-  if (loading) {
-    return <div>Cargando...</div>;
-  }
-
+if (loading) {
+  return <div>Cargando...</div>;
+} else {
   return (
     <div className="item-detail-container">
       {producto ? <ItemDetail producto={producto} /> : <NotFound />}
     </div>
   );
+}
 }
 
 export default ItemDetailContainer;
