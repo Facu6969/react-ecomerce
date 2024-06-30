@@ -1,31 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../data/productos.json';
 import ItemDetail from './ItemDetail';
-import NotFound from './NotFound';
+import NotFound  from './NotFound';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
+  
 
   useEffect(() => {
     setLoading(true);
     
-    const fetchProducto = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const productoEncontrado = data.find(producto => producto.id === parseInt(id));
-        resolve(productoEncontrado);
-      }, 1000); 
-    });
+    const fetchProducto = async () => {
+      try {
+        const docRef = doc(db, 'productos', id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setProducto({ id: docSnap.id, ...docSnap.data() });
+        } else {
+          console.log("No such document!");
+          setProducto(null);
+        }
+      } catch (error) {
+        console.error("Error al cargar el producto:", error);
+        setProducto(null);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    fetchProducto.then(productoEncontrado => {
-      setProducto(productoEncontrado);
-      setLoading(false); 
-    }).catch(error => {
-      console.error("Error al cargar el producto:", error);
-      setLoading(false);
-    });
+    fetchProducto();
   }, [id]);
 
 if (loading) {

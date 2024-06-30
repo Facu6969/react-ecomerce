@@ -125,44 +125,44 @@
     text-align: center;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .producto h2 {
+}
+
+.producto h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-  }
-  
-  .producto img {
+}
+
+.producto img {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
-  }
-  
-  .producto p {
+}
+
+.producto p {
     font-size: 1em;
     margin: 10px 0;
-  }
-  
-  .producto a {
+}
+
+.producto a {
     display: inline-block;
     margin-top: 10px;
     color: #007bff;
     text-decoration: none;
-  }
-  
-  .producto a:hover {
+}
+
+.producto a:hover {
     text-decoration: underline;
-  }
-  
-  .quantity-controls {
+}
+
+.quantity-controls {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-  }
-  
-  .quantity-controls button {
+}
+
+.quantity-controls button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -170,18 +170,18 @@
     margin: 0 5px;
     cursor: pointer;
     border-radius: 3px;
-  }
-  
-  .quantity-controls button:hover {
+}
+
+.quantity-controls button:hover {
     background-color: #0056b3;
-  }
-  
-  .quantity-controls span {
+}
+
+.quantity-controls span {
     margin: 0 10px;
     font-size: 1.2em;
-  }
-  
-  .add-button {
+}
+
+.add-button {
     background-color: #28a745;
     color: white;
     border: none;
@@ -189,11 +189,11 @@
     margin-top: 10px;
     cursor: pointer;
     border-radius: 3px;
-  }
-  
-  .add-button:hover {
+}
+
+.add-button:hover {
     background-color: #218838;
-  }
+}
   
 
 .main-content {
@@ -219,9 +219,9 @@
     background-position: center; 
     background-repeat: no-repeat; 
     color: red; 
-  }
+}
   
-  .home-link {
+.home-link {
     font-size: 1.5rem;
     margin-top: 20px;
     color: black;
@@ -229,7 +229,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 450px;
-  }
+}
   
 .home-link:hover {
     background-color: transparent;
