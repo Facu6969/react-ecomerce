@@ -4,14 +4,14 @@ import CartContext from '../contex/CartContext';
 import useCount from '../hooks/useCount';
 
 const Item = ({ producto, categorias }) => {
-  const {agregarProducto} = useContext(CartContext);
+  const { agregarProducto } = useContext(CartContext);
   const { count, handleRestar, handleSumar } = useCount(1, 1, producto.cantidad);
-  const categoria = categorias.find(cat => cat.id === producto.categoria.id);
+  const categoria = categorias.find(cat => cat.id === producto.categorias.id);
   
   return (
     <div className='producto'>
-        <h2>{categoria ? categoria.nombre : producto.categoria.nombre}</h2>
-        <img src={producto.imagen} alt={producto.categoria.nombre} />
+        <h2>{categoria ? categoria.nombre : producto.categorias.nombre}</h2>
+        <img src={producto.imagen} alt={categoria ? categoria.nombre : producto.categorias.nombre} />
         <p>Medida: {producto.medida}</p>
         <p>Largo: {producto.largo}</p>
         <p>Precio: ${producto.precio}</p>

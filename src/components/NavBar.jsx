@@ -13,16 +13,18 @@ const NavBar = (props) => {
   return (
     <nav className='nav'>
       <ul className='nav-menu'>
-        <li><NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Inicio</NavLink></li>
-        {categorias.map(categoria => (
-          <li key={categoria.id}>
-            <NavLink 
-              to={`/categorias/${categoria.id}`} 
-              className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
-            >
-              {categoria.nombre}
-            </NavLink>
-          </li>
+        <li><NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Inicio</NavLink>
+        </li>
+        {
+          categorias.map(categoria => (
+            <li key={categoria.id}>
+              <NavLink 
+                to={`/categorias/${categoria.id}`} 
+                className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+              >
+                {categoria.nombre}
+              </NavLink>
+            </li>
         ))}
       </ul>
       <Cart num={props.num} />

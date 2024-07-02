@@ -194,8 +194,48 @@
 .add-button:hover {
     background-color: #218838;
 }
+
+/*detalle de producto*/
+
+.item-detail-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #f10606;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(251, 250, 250, 0.817);
+}
   
 
+
+/* item detail*/
+  
+.producto-detalle {
+    text-align: center;
+}
+  
+.producto-detalle h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+  
+.producto-detalle img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(13, 227, 6, 0.925);
+}
+  
+.producto-detalle p {
+    font-size: 24px;
+    margin: 5px 0;
+}
+  
+
+  
 .main-content {
     background: linear-gradient(
         90deg,

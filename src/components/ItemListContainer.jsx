@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../firebase/config';
 
 const ItemListContainer = () => {
@@ -16,35 +16,47 @@ const ItemListContainer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoriasSnap = await getDocs(collection(db, 'categorias'));
-        const categoriasData = categoriasSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        const categoriaRef = collection(db, 'categorias');
+        const categoriaSnapshot = await getDocs(categoriaRef);
+        const categoriasData = categoriaSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        console.log("Categorías obtenidas:", categoriasData);
         setCategorias(categoriasData);
-
-        const productosSnap = await getDocs(collection(db, 'productos'));
-        const productosData = productosSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
         if (id) {
           const categoria = categoriasData.find(categoria => categoria.id === id);
           if (categoria) {
             setTitulo(categoria.nombre);
-            setProductos(productosData.filter(producto => producto.categoriaId === id));
+            const productoRef = query(collection(db, 'productos'), where('categorias.id', '==', id));
+            const productoSnapshot = await getDocs(productoRef);
+            const productosData = productoSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            console.log("Productos obtenidos:", productosData);
+            setProductos(productosData);
           } else {
             setTitulo("Productos");
+            const productoRef = collection(db, 'productos');
+            const productoSnapshot = await getDocs(productoRef);
+            const productosData = productoSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            console.log("Productos obtenidos:", productosData);
             setProductos(productosData);
           }
         } else {
           setTitulo("Productos");
+          const productoRef = collection(db, 'productos');
+          const productoSnapshot = await getDocs(productoRef);
+          const productosData = productoSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+          console.log("Productos obtenidos:", productosData);
           setProductos(productosData);
         }
       } catch (error) {
         console.error("Error al obtener los datos:", error);
       } finally {
-        setLoading(false); 
+        setLoading(false);
       }
     };
 
     fetchData();
   }, [id]);
+
 
   return (
     <div className="item-list-container">
