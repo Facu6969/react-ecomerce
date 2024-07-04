@@ -1,14 +1,15 @@
 import React, { useContext } from 'react';
-import CartContext from '../contex/CartContext.jsx';
 import useCount from '../hooks/useCount';
+import useToasty from '../hooks/useToasty';
 
 const ItemDetail = ({ producto }) => {
-  const { agregarProducto } = useContext(CartContext);
   const { count, handleRestar, handleSumar } = useCount(1, 1, producto?.cantidad);
+  const { handleAgregarProducto } = useToasty();
 
   if (!producto) {
     return <div>Producto no encontrado</div>;
   }
+
 
   return (
     <div className='producto-detalle'>
@@ -23,7 +24,7 @@ const ItemDetail = ({ producto }) => {
         <span>{count}</span>
         <button onClick={handleSumar}>+</button>
       </div>
-      <button onClick={() => agregarProducto(producto, count)} className='add-button'>Agregar Producto</button>
+      <button onClick={() => handleAgregarProducto(producto, count)} className='add-button'>Agregar Producto</button>
     </div>
   );
 };

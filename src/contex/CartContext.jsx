@@ -26,7 +26,7 @@ export const CartProvider = ({ children }) => {
         : producto
     );
 
-    // Aquí podrías guardar los productos actualizados en el estado o enviarlos a un backend
+    // guardar los productos actualizados en el estado o enviarlos a un backend
     // productosData = productosActualizados;
 };
 

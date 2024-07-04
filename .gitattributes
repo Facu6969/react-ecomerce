@@ -1,0 +1,9 @@
+# Asegurar LF para archivos .jsx
+*.jsx text eol=lf
+
+# Asegurar LF para archivos .js
+*.js text eol=lf
+
+# Asegurar LF para archivos .css
+*.css text eol=lf
+

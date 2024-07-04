@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import CartContext from '../contex/CartContext';
 import useCount from '../hooks/useCount';
+import useToasty from '../hooks/useToasty';
 
 const Item = ({ producto, categorias }) => {
   const { agregarProducto } = useContext(CartContext);
   const { count, handleRestar, handleSumar } = useCount(1, 1, producto.cantidad);
   const categoria = categorias.find(cat => cat.id === producto.categorias.id);
+  const { handleAgregarProducto } = useToasty();
   
   return (
     <div className='producto'>
@@ -21,7 +23,7 @@ const Item = ({ producto, categorias }) => {
           <span>{count}</span>
           <button onClick={handleSumar}>+</button>
         </div>
-        <button onClick={() => agregarProducto(producto, count)} className='add-button'>Agregar Producto</button>
+        <button onClick={() => handleAgregarProducto(producto, count)} className='add-button'>Agregar Producto</button>
     </div>
   );
 }
