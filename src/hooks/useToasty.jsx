@@ -5,7 +5,7 @@ import { useToast } from "../contex/ToastifyContext";
 
 
 const useToasty = () => {
-    const { agregarProducto } = useContext(CartContext);
+    const { agregarProducto, carrito, setCarrito } = useContext(CartContext);
     const {showToast} = useToast();
 
     const handleAgregarProducto = (producto, cantidad) => {
@@ -13,7 +13,12 @@ const useToasty = () => {
         showToast({ text: "Producto agregado al carrito!" });
     };
 
-    return {handleAgregarProducto};
+    const handleEliminarProducto = (productoId) => {
+        setCarrito(carrito.filter(p => p.id !== productoId));
+        showToast({ text: `Producto eliminado del carrito` });
+      };
+
+    return {handleAgregarProducto, handleEliminarProducto};
 };
 
 export default useToasty;

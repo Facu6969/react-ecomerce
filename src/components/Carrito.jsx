@@ -2,10 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import CartContext from '../contex/CartContext.jsx';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase/config.js';
+import useToasty from '../hooks/useToasty.jsx';
 
 const Carrito = () => {
-  const { carrito, setCarrito, CalcTotal, handleChangeCantidad, handleKeyDown } = useContext(CartContext);
+  const { carrito, CalcTotal, handleChangeCantidad, handleKeyDown } = useContext(CartContext);
   const [productosF, setProductosF] = useState([]);
+  const { handleEliminarProducto } = useToasty();
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -46,7 +48,7 @@ const Carrito = () => {
                       onKeyDown={(e) => handleKeyDown(e, producto)}
                       className="inputCantidad"
                     />
-                    <button onClick={() => setCarrito(carrito.filter(p => p.id !== producto.id))}>Eliminar</button>
+                    <button onClick={() => handleEliminarProducto(producto.id, productosF)}>Eliminar</button>
                   </div>
                 </div>
               </div>

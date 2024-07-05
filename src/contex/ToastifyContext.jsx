@@ -21,7 +21,7 @@ const ToastProvider = ({ children }) => {
         close,
         gravity,
         position,
-        backgroundColor,
+        style: { background: backgroundColor },
         stopOnFocus: true,
       }).showToast();
     };
