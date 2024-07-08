@@ -47,46 +47,47 @@ En el panel de Firebase, ir a "Project settings".
 En la sección "Your apps", seleccionar "Web" y seguir las instrucciones para registrar tu aplicación.
 Copiar la configuración de Firebase proporcionada y pegarla en un archivo src/firebase/config.js.
 
-    javascript
-// src/firebase/config.js
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+    // src/firebase/config.js
+    import { initializeApp } from 'firebase/app';
+    import { getFirestore } from 'firebase/firestore';
 
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+    const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+    };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
 
-export { db };
+    export { db };
+
 4. Ejecutar la aplicación
+
     ```bash
 npm start
 
 📂 Estructura del Proyecto
     ```bash
-Copiar código
-/src
-  /components
-    - Cart.jsx
-    - ProductList.jsx
-    - Checkout.jsx
+    /src
+    /components
+        - Cart.jsx
+        - ProductList.jsx
+        - Checkout.jsx
+        ...
+    /context
+        - CartContext.jsx
+    /hooks
+        - useSweetAlert.jsx
+    /firebase
+        - config.js
+    - App.js
+    - index.js
     ...
-  /context
-    - CartContext.jsx
-  /hooks
-    - useSweetAlert.jsx
-  /firebase
-    - config.js
-  - App.js
-  - index.js
-  ...
+
 🤝 Contribuir
 Si deseas contribuir al proyecto, por favor sigue estos pasos:
 
@@ -95,6 +96,6 @@ Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
 Realiza tus cambios y commítelos (git commit -am 'Añadir nueva funcionalidad').
 Sube los cambios a tu repositorio (git push origin feature/nueva-funcionalidad).
 Abre un Pull Request en GitHub.
-Para más detalles sobre cómo crear un pull request, puedes consultar este artículo de GitHub.
+Para más detalles sobre cómo crear un pull request, puedes consultar [este artículo de GitHub.](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 ¡Gracias por visitar nuestro proyecto! Esperamos que disfrutes explorándolo y te animes a contribuir.
