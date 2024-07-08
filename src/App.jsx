@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Carrito from "./components/Carrito.jsx"
 import NotFound from './components/NotFound.jsx';
+import Checkout from './components/Checkout.jsx';
 import { CartProvider } from './contex/CartContext.jsx';
 import ToastProvider from './contex/ToastifyContext.jsx';
 import './css/main.css';
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/item/:id" element={<ItemDetailContainer />} />
                 <Route path="/carrito" element={<Carrito />} />
                 <Route path="/*" element={<NotFound />} />
+                <Route path="/finalizar-compra" element={<Checkout />} />
               </Routes>
             </div>
           </div>

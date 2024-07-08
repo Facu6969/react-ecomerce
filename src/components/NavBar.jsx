@@ -1,13 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import categoriasData from '../data/categorias.json';
+import {collection, getDocs} from 'firebase/firestore';
+import {db} from '../firebase/config';
 import Cart from './Cart';
 
 const NavBar = (props) => {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    setCategorias(categoriasData);
+    const fetchCategorias = async () => {
+      try {
+        const categoriasSnap = await getDocs(collection(db, 'categorias'));
+        const categoriasData = categoriasSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setCategorias(categoriasData);
+      } catch (error) {
+        console.error('Error al obtener las categorías desde Firebase:', error);
+      }
+    };
+
+    fetchCategorias();
   }, []);
 
   return (

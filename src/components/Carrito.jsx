@@ -3,11 +3,13 @@ import CartContext from '../contex/CartContext.jsx';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase/config.js';
 import useToasty from '../hooks/useToasty.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const Carrito = () => {
   const { carrito, CalcTotal, handleChangeCantidad, handleKeyDown } = useContext(CartContext);
   const [productosF, setProductosF] = useState([]);
   const { handleEliminarProducto } = useToasty();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -22,6 +24,10 @@ const Carrito = () => {
 
     fetchProductos();
   }, []);
+
+  const pagar = () => {
+    navigate('/finalizar-compra');
+  };
 
   return (
     <div className="carrito-container">
@@ -60,7 +66,7 @@ const Carrito = () => {
       </div>
       <div className="total-carrito">
         <h2>Total: ${CalcTotal()}</h2>
-        <button>Pagar</button>
+        <button onClick={pagar} disabled={carrito.length === 0}>Pagar</button>
       </div>
     </div>
   );

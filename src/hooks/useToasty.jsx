@@ -9,7 +9,7 @@ const useToasty = () => {
     const {showToast} = useToast();
 
     const handleAgregarProducto = (producto, cantidad) => {
-        agregarProducto(producto, cantidad);
+        agregarProducto({...producto, cantidadOriginal: producto.cantidad}, cantidad);
         showToast({ text: "Producto agregado al carrito!" });
     };
 
