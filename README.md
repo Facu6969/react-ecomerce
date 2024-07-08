@@ -29,9 +29,9 @@ Este proyecto es una aplicación web de comercio electrónico que permite a los 
    git clone https://github.com/Facu6969/react-ecomerce.git
    cd tu_repositorio
 2. Instalar dependencias
-bash
-Copiar código
-npm install
+    ```bash
+    npm install
+
 3. Configurar Firebase
 Crear un proyecto en Firebase:
 
@@ -46,8 +46,8 @@ Obtener el archivo de configuración de Firebase:
 En el panel de Firebase, ir a "Project settings".
 En la sección "Your apps", seleccionar "Web" y seguir las instrucciones para registrar tu aplicación.
 Copiar la configuración de Firebase proporcionada y pegarla en un archivo src/firebase/config.js.
-javascript
-Copiar código
+
+    javascript
 // src/firebase/config.js
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
@@ -66,11 +66,11 @@ const db = getFirestore(app);
 
 export { db };
 4. Ejecutar la aplicación
-bash
-Copiar código
+    ```bash
 npm start
+
 📂 Estructura del Proyecto
-bash
+    ```bash
 Copiar código
 /src
   /components
