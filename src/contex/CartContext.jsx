@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
       );
       setCarrito(carritoActualizado);
     } else {
-      setCarrito([...carrito, { ...producto, cantidad }]);
+      setCarrito([...carrito, { ...producto, cantidad, cantidadOriginal: producto.cantidad }]);
     }
 
     const nuevaCantidad = parseInt(producto.cantidad, 10) - parseInt(cantidad, 10);
@@ -42,18 +42,23 @@ export const CartProvider = ({ children }) => {
 const handleChangeCantidad = async(event, producto) => {
   const nuevaCantidad = parseInt(event.target.value, 10);
   if (!isNaN(nuevaCantidad) && nuevaCantidad >= 0) {
+    const cantidadEnCarritoAnterior = carrito.find(p => p.id === producto.id)?.cantidad || 0;
     const carritoActualizado = carrito.map(p =>
       p.id === producto.id
         ? { ...p, cantidad: nuevaCantidad }
         : p
     );
     setCarrito(carritoActualizado.filter(p => p.cantidad > 0));
+    
 
-    const nuevaCantidadProducto = producto.cantidad - (nuevaCantidad - producto.cantidad);
-      if (!isNaN(nuevaCantidadProducto) && nuevaCantidadProducto >= 0) {
-        await actualizarCantidadProducto(producto.id, nuevaCantidadProducto);
+    const diferenciaCantidad = nuevaCantidad - cantidadEnCarritoAnterior;
+    const nuevaCantidadStock = producto.cantidad - diferenciaCantidad;
+      
+      
+      if (!isNaN(nuevaCantidadStock) && nuevaCantidadStock >= 0) {
+        await actualizarCantidadProducto(producto.id, nuevaCantidadStock);
       }
-  }
+    }
 };
 
 const handleKeyDown = (event, producto) => {

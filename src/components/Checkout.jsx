@@ -26,7 +26,7 @@ const Checkout = () => {
           setPedidoId(docRef.id);
 
           for (const producto of carrito) {
-            const nuevaCantidad = producto.cantidad - producto.cantidad;
+            const nuevaCantidad = producto.cantidadOriginal - producto.cantidad;
             await actualizarCantidadProducto(producto.id, nuevaCantidad);
           }
     
