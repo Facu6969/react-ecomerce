@@ -50,6 +50,7 @@ Este proyecto es una aplicación web de comercio electrónico que permite a los 
 - En la sección "Your apps", seleccionar "Web" y seguir las instrucciones para registrar tu aplicación.
 - Copiar la configuración de Firebase proporcionada y pegarla en un archivo src/firebase/config.js.
 
+    ```bash
     // src/firebase/config.js
     import { initializeApp } from 'firebase/app';
     import { getFirestore } from 'firebase/firestore';
