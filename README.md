@@ -1,6 +1,6 @@
 # 🛒 Proyecto de E-Commerce con React y Firebase
 
-![E-Commerce](https://react-ecomerce-sigma.vercel.app)
+🌎[E-Commerce](https://react-ecomerce-sigma.vercel.app)
 
 ## Descripción del Proyecto
 
@@ -33,31 +33,34 @@ Este proyecto es una aplicación web de comercio electrónico que permite a los 
     npm install
 
 3. Configurar Firebase
-Crear un proyecto en Firebase:
 
-Ir a Firebase Console.
-Hacer clic en "Add project" y seguir los pasos para crear un nuevo proyecto.
-Configurar Firestore y habilitar la autenticación:
+1. Crear un proyecto en Firebase:
 
-En el panel de Firebase, ir a "Firestore Database" y hacer clic en "Create database".
-Seguir las instrucciones para configurar Firestore.
-Obtener el archivo de configuración de Firebase:
+- Ir a Firebase Console.
+- Hacer clic en "Add project" y seguir los pasos para crear un nuevo proyecto.
 
-En el panel de Firebase, ir a "Project settings".
-En la sección "Your apps", seleccionar "Web" y seguir las instrucciones para registrar tu aplicación.
-Copiar la configuración de Firebase proporcionada y pegarla en un archivo src/firebase/config.js.
+2. Configurar Firestore y habilitar la autenticación:
+
+- En el panel de Firebase, ir a "Firestore Database" y hacer clic en "Create database".
+- Seguir las instrucciones para configurar Firestore.
+
+3. Obtener el archivo de configuración de Firebase:
+
+- En el panel de Firebase, ir a "Project settings".
+- En la sección "Your apps", seleccionar "Web" y seguir las instrucciones para registrar tu aplicación.
+- Copiar la configuración de Firebase proporcionada y pegarla en un archivo src/firebase/config.js.
 
     // src/firebase/config.js
     import { initializeApp } from 'firebase/app';
     import { getFirestore } from 'firebase/firestore';
 
     const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
     };
 
     const app = initializeApp(firebaseConfig);
@@ -96,11 +99,16 @@ Copiar la configuración de Firebase proporcionada y pegarla en un archivo src/f
 
 Si deseas contribuir al proyecto, por favor sigue estos pasos:
 
-Fork el repositorio.
-Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
-Realiza tus cambios y commítelos (git commit -am 'Añadir nueva funcionalidad').
-Sube los cambios a tu repositorio (git push origin feature/nueva-funcionalidad).
-Abre un Pull Request en GitHub.
+1. Fork el repositorio.
+
+2. Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+
+3. Realiza tus cambios y commítelos (git commit -am 'Añadir nueva funcionalidad').
+
+4. Sube los cambios a tu repositorio (git push origin feature/nueva-funcionalidad).
+
+5. Abre un Pull Request en GitHub.
+
 Para más detalles sobre cómo crear un pull request, puedes consultar [este artículo de GitHub.](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 ¡Gracias por visitar el proyecto! Espero que disfrutes explorándolo y te animes a contribuir.
