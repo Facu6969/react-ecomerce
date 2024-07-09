@@ -8,7 +8,7 @@ Este proyecto es una aplicación web de comercio electrónico que permite a los 
 
 ## 🚀 Tecnologías Utilizadas
 
-- [My Skills](https://skillicons.dev/icons?i=react)**React**: Utilizado para construir la interfaz de usuario.
+- ![My Skills](https://skillicons.dev/icons?i=react)**React**: Utilizado para construir la interfaz de usuario.
 - **Firebase Firestore**: Utilizado como base de datos para almacenar productos y pedidos.
 - **React Hook Form**: Utilizado para manejar formularios.
 - **SweetAlert**: Utilizado para mostrar alertas al usuario.
