@@ -27,7 +27,8 @@ Este proyecto es una aplicación web de comercio electrónico que permite a los 
 1. **Clonar el repositorio**:
    ```bash
    git clone https://github.com/Facu6969/react-ecomerce.git
-   cd tu_repositorio
+   cd react-ecomerce
+   
 2. Instalar dependencias
     ```bash
     npm install
@@ -36,7 +37,7 @@ Este proyecto es una aplicación web de comercio electrónico que permite a los 
 
 1. Crear un proyecto en Firebase:
 
-- Ir a Firebase Console.
+- Ir a [Firebase Console.]
 - Hacer clic en "Add project" y seguir los pasos para crear un nuevo proyecto.
 
 2. Configurar Firestore y habilitar la autenticación:
