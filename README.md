@@ -8,17 +8,17 @@ Este proyecto es una aplicación web de comercio electrónico que permite a los 
 
 ## 🚀 Tecnologías Utilizadas
 
-- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)**React**: Utilizado para construir la interfaz de usuario.
-- ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)**Firebase Firestore**: Utilizado como base de datos para almacenar productos y pedidos.
-- ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)**React Hook Form**: Utilizado para manejar formularios.
+- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB): Utilizado para construir la interfaz de usuario.
+- ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34): Utilizado como base de datos para almacenar productos y pedidos.
+- ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white): Utilizado para manejar formularios.
 - **SweetAlert**: Utilizado para mostrar alertas al usuario.
-- ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)**Firebase**: Utilizado para la autenticación y la configuración de la base de datos.
+- ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase): Utilizado para la autenticación y la configuración de la base de datos.
 - **Toastify-js**: Utilizado como alerta de producto agregado y producto eliminado.
-- ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)**Vercel**: Utilizado para el despliegue y hosting del proyecto.
-- ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)**React Router**: Utilizado para la navegación entre páginas en la aplicación React.
-- ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)**GitHub Git**: Utilizado para el control de versiones y colaboración en el desarrollo.
-- ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)**npm**: Utilizado para la gestión de paquetes y dependencias.
-- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)**CSS**: Utilizado para el estilo y diseño de la aplicación web.
+- ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white): Utilizado para el despliegue y hosting del proyecto.
+- ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white): Utilizado para la navegación entre páginas en la aplicación React.
+- ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white): Utilizado para el control de versiones y colaboración en el desarrollo.
+- ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white): Utilizado para la gestión de paquetes y dependencias.
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white): Utilizado para el estilo y diseño de la aplicación web.
 
 ## 🎯 Funcionalidades Principales
 
