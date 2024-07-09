@@ -68,27 +68,32 @@ Copiar la configuración de Firebase proporcionada y pegarla en un archivo src/f
 4. Ejecutar la aplicación
 
     ```bash
-npm start
+    npm start
 
 📂 Estructura del Proyecto
-    ```bash
+
+- Estructura
+
+    ```dash
     /src
-    /components
-        - Cart.jsx
-        - ProductList.jsx
-        - Checkout.jsx
+        /components
+            - Cart.jsx
+            - ProductList.jsx
+            - Checkout.jsx
+            ...
+        /context
+            - CartContext.jsx
+        /hooks
+            - useSweetAlert.jsx
+        /firebase
+            - config.js
+        - App.js
+        - index.js
         ...
-    /context
-        - CartContext.jsx
-    /hooks
-        - useSweetAlert.jsx
-    /firebase
-        - config.js
-    - App.js
-    - index.js
-    ...
+    
 
 🤝 Contribuir
+
 Si deseas contribuir al proyecto, por favor sigue estos pasos:
 
 Fork el repositorio.
@@ -98,4 +103,4 @@ Sube los cambios a tu repositorio (git push origin feature/nueva-funcionalidad).
 Abre un Pull Request en GitHub.
 Para más detalles sobre cómo crear un pull request, puedes consultar [este artículo de GitHub.](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
-¡Gracias por visitar nuestro proyecto! Esperamos que disfrutes explorándolo y te animes a contribuir.
+¡Gracias por visitar el proyecto! Espero que disfrutes explorándolo y te animes a contribuir.
